@@ -29,7 +29,7 @@ NOPULL_FLAG = $(if $(NOPULL_ARG),,--pull)
 # Set shell
 SHELL=/bin/bash -e -o pipefail
 
-# App version settings
+# App Version settings 
 COMMIT_TIMESTAMP := $(shell echo $$(git log -1 --pretty='format:%cd' --date='format:%Y%m%d%H%M%S' 2>/dev/null))
 COMMIT_ID := $(shell echo $$(git rev-parse --short HEAD 2>/dev/null))
 COMMIT_TAG := $(shell echo $$(git tag --points-at HEAD 2>/dev/null))
